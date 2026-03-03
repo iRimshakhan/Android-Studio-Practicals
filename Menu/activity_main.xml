@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Blank white screen — menu is in top right corner ⋮ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"/>
+
+
+<!--Add following line in AndroidManifest.xml file
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        for toolbar
+-->
+
