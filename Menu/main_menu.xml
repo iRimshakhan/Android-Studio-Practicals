@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- This appears in the ⋮ overflow on right corner -->
+    <item
+        android:id="@+id/menu_item_parent"
+        android:title="Menu Item"
+        android:showAsAction="never">
+
+        <menu>
+            <item android:id="@+id/sub_item1" android:title="sub item1"/>
+            <item android:id="@+id/sub_item2" android:title="sub item2"/>
+            <item android:id="@+id/sub_item3" android:title="sub item3"
+                android:enabled="false"/> <!--if asked to disabled-->
+            <item android:id="@+id/sub_item4" android:title="sub item4"/>
+        </menu>
+
+    </item>
+
+</menu>
