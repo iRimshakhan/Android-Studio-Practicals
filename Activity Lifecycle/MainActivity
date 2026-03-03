@@ -1,0 +1,88 @@
+import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.ScrollView
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    private val TAG = "LifecycleDemo"
+
+    private var logText = ""
+
+    private lateinit var tvCurrent : TextView
+    private lateinit var tvLog     : TextView
+    private lateinit var scrollView: ScrollView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        tvCurrent  = findViewById(R.id.tvCurrent)
+        tvLog      = findViewById(R.id.tvLog)
+        scrollView = findViewById(R.id.scrollView)
+
+        val btnClear = findViewById<Button>(R.id.btnClear)
+
+        btnClear.setOnClickListener {
+            logText    = ""
+            tvLog.text = ""
+        }
+
+        logMethod("onCreate()")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        logMethod("onStart()")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        logMethod("onResume()")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        logMethod("onPause()")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        logMethod("onStop()")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        logMethod("onRestart()")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        logMethod("onDestroy()")
+    }
+
+    private fun logMethod(methodName: String) {
+
+        Toast.makeText(this, methodName, Toast.LENGTH_SHORT).show()
+
+        Log.d(TAG, "▶ $methodName called")
+
+        if (::tvCurrent.isInitialized) {
+            tvCurrent.text = methodName
+        }
+
+        if (::tvLog.isInitialized) {
+            val count    = logText.lines().count { it.isNotEmpty() } + 1
+            val newEntry = "$count.  $methodName\n"
+            logText     += newEntry
+            tvLog.text   = logText
+
+            scrollView.post {
+                scrollView.fullScroll(ScrollView.FOCUS_DOWN)
+            }
+        }
+    }
+}
