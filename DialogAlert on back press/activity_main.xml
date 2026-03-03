@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Main screen layout.
+    Clean, centered UI that clearly shows the user what this app demonstrates.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#F0F4FF"
+    android:padding="28dp">
+
+    <!-- App icon -->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="🚪"
+        android:textSize="52sp"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:layout_marginBottom="28dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit Dialog Demo"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1A237E"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Subtitle description -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press the Back button to see\nthe Exit Alert Dialog"
+        android:textSize="16sp"
+        android:textColor="#5C6BC0"
+        android:gravity="center"
+        android:layout_marginBottom="48dp"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="60dp"
+        android:layout_height="3dp"
+        android:background="#3F51B5"
+        android:layout_marginBottom="48dp"/>
+
+    <!-- Hint card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="20dp"
+        android:elevation="2dp">
+
+        <!-- What happens label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What happens:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#3F51B5"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Step 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="1"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Press the Back button on your device"
+                android:textSize="14sp"
+                android:textColor="#424242"/>
+        </LinearLayout>
+
+        <!-- Step 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="2"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="An Alert Dialog will appear"
+                android:textSize="14sp"
+                android:textColor="#424242"/>
+        </LinearLayout>
+
+        <!-- Step 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:text="3"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Yes to exit or No to stay"
+                android:textSize="14sp"
+                android:textColor="#424242"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Back button press hint at the bottom -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="◀  Press Back to try it now"
+        android:textSize="13sp"
+        android:textColor="#9FA8DA"
+        android:layout_marginTop="36dp"/>
+
+</LinearLayout>
