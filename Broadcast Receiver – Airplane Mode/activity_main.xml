@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Airplane Mode Detector"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#00897B"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Status updates live when airplane mode changes -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Checking..."
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+</LinearLayout>
+
+<!-- Paste the following line in receiver section of manifest file
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE"/>
+            </intent-filter>
+
+         -->
